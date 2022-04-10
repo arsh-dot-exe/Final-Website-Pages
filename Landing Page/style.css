@@ -1,0 +1,75 @@
+* {
+  letter-spacing: 0.07em;
+
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* Classes for Background */
+.bg {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url("/assets/background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  object-fit: cover;
+  z-index: 100;
+}
+
+/* Styling for body elements */
+.body__title {
+  position: absolute;
+  left: 5.8vw;
+  top: 19.3vh;
+
+  font-family: Didact Gothic;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3em;
+  letter-spacing: 0.03em;
+
+  color: #333333;
+}
+
+.body__para {
+  position: absolute;
+  width: 485px;
+  left: 5.8vw;
+  top: 27.4vh;
+
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-size: 0.9375em;
+  line-height: 20px;
+  letter-spacing: 0.07em;
+  color: #5b5b5b;
+}
+
+.body__button {
+  position: absolute;
+  left: 5.8vw;
+  top: 48vh;
+
+  text-decoration: none;
+
+  font-family: Didact Gothic;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.25em;
+  color: #fff;
+
+  padding: 1.5vh 0.8vw;
+
+  background: #e05e57;
+  border-radius: 6px;
+
+  transition: 0.4s; /* Animation */
+}
+
+.body__button:hover {
+  transform: scale(1.07);
+  background: rgba(229, 91, 84, 0.973);
+}

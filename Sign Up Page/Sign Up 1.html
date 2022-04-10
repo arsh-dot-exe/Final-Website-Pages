@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+
+    <!-- Link to files -->
+    <link rel="stylesheet" type="text/css" href="/global.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="/loadTime.js"></script>
+
+    <!-- Boxicons Import -->
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- Google Fonts (Poppins, Didact Gothic, Lexend Deca)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Open+Sans&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body onload="loadTime()" style="background-color: #f3f5f6">
+    <!-- Logo Div -->
+    <div class="logo"></div>
+
+    <!-- Section for Form -->
+    <div class="main__content">
+      <section class="form__group">
+        <a href="/Landing Page/Landing Page.html"><i class="bx bx-x cross__symbol"></i></a>
+        <div class="all__tags">
+          <h2 class="welcome__text">Welcome!</h2>
+
+          <div class="sign__in__grp">
+            <h3>Sign up to</h3>
+            <h4>share your cultures!</h4>
+          </div>
+
+          <form onsubmit="userRegister1(event);">
+            <div class="input__grp">
+              <h3>Email Address</h3>
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                text=""
+                id="emailId"
+                required
+              />
+            </div>
+
+            <div class="input__grp">
+              <h3>User name</h3>
+              <input
+                id="username"
+                type="text"
+                placeholder="Enter your user name"
+                text=""
+                required
+              />
+            </div>
+
+            <div class="input__grp">
+              <h3>Password</h3>
+              <input
+                id="password"
+                type="password"
+                placeholder="Enter your password"
+                text=""
+                maxlength="20"
+                minlength="6"
+                oninput="validatePassword()"
+                required
+              />
+            </div>
+
+            <div class="input__grp">
+              <h3>Confirm Password</h3>
+              <input
+                id="confirm_password"
+                type="password"
+                placeholder="Confirm your password"
+                text=""
+                required
+                oninput="validatePassword()"
+              />
+
+              <div class="match__div" id="match__div">
+                <i class="bx bxs-alarm-exclamation error__icon"></i>
+                <p class="match__text">Passwords dont match!</p>
+              </div>
+            </div>
+
+            <input type="submit" class="reg__button" style="cursor: pointer" value="Confirm" />
+          </form>
+
+          <div class="register__grp">
+            <h3>
+              Already have an account? <b><a href="/Sign In Page/Sign In.html">Login</a></b>
+            </h3>
+          </div>
+        </div>
+      </section>
+
+      <img src="/assets/form_image.svg" class="img__styling" alt="Image to fill canvas" />
+    </div>
+  </body>
+
+  <!-- Scripts to load for Database (MUST BE DONE AFTER BODY TAG) -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+  <!-- Link to JS File (MUST BE DONE AFTER LOADING DATABASE FILES) -->
+  <script src="Sign Up.js"></script>
+</html>

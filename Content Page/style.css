@@ -1,0 +1,365 @@
+body {
+  padding-bottom: 10em !important;
+}
+
+/* Change margin for header */
+.header__class {
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  margin-inline: 2vw !important;
+
+  margin-bottom: 7vh !important;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.28);
+}
+
+/* Styling for profile picture */
+.user__pfp {
+  width: 3vw;
+  margin-right: 1vw;
+
+  border-radius: 50%;
+}
+
+.user__pfp::before {
+  padding-top: 100%;
+}
+
+.search__top__section {
+  display: flex;
+  justify-content: space-between;
+
+  margin-inline: 5em;
+}
+
+/* Styling for search input/icon div */
+.search__input {
+  display: flex;
+  align-items: center;
+}
+
+/* Search Input */
+.search__input input {
+  /* Text formatting */
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0px;
+
+  color: #000;
+
+  padding-block: 1.25em;
+  padding-left: 2.2em;
+
+  width: 80vw;
+
+  /* Box Formatting */
+  background: #ffffff;
+  border: 0.6px solid #282828;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+/* Search Icon */
+.search__input i {
+  position: relative;
+  right: -27px;
+
+  font-size: 1.1875em;
+  color: #7f8289;
+
+  z-index: 3;
+}
+
+.see__top__btn {
+  /* Box Formatting */
+  background: #ea5455;
+  border-radius: 11px;
+
+  display: flex;
+  align-items: center;
+  justify-items: center;
+
+  margin-left: 0.5vw;
+  /* Text Formatting */
+  font-family: "Didact Gothic";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+
+  letter-spacing: 0.07em;
+  text-decoration-line: underline;
+
+  color: #ffffff;
+
+  padding-inline: 1em;
+
+  transition: all ease-in 0.2s;
+}
+
+.see__top__btn:hover {
+  transform: scale(1.07);
+  background: rgba(229, 91, 84, 0.973);
+}
+
+/* Styling for user group and user cards */
+.user__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  background: #ffffff;
+  border-radius: 8px;
+
+  width: 75vw;
+  padding-inline: 1vw 3vw;
+  padding-block: 1.5vh;
+  margin-bottom: 2vh;
+}
+
+.culture_and_view_btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding-inline: 3vw;
+  padding-block: 4vh 2vh;
+  margin-left: 5vw;
+}
+
+.culture__heading {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+
+  letter-spacing: 0.07em;
+
+  padding-right: 1em;
+
+  color: #000000;
+}
+
+.view__more {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px;
+
+  background: linear-gradient(135deg, rgba(0, 173, 191, 0.75) 0%, rgba(70, 94, 251, 0.75) 100%);
+  border: none;
+  border-radius: 11px;
+
+  cursor: pointer;
+
+  /* Font Formatting */
+  font-family: "Didact Gothic";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+
+  letter-spacing: 0.07em;
+  text-decoration-line: underline;
+
+  color: #ffffff;
+}
+
+.view__more:hover {
+  background: #0078d4;
+}
+
+.profile__info {
+  display: flex;
+  align-items: center;
+
+  width: 25%;
+  padding-bottom: 0.3em;
+}
+
+.profile__picture {
+  margin-right: 0.75em;
+
+  width: 15%;
+}
+
+.profile__picture::before {
+  padding-top: 100%;
+}
+
+.user__name {
+  font-family: "Didact Gothic";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+
+  letter-spacing: 0.07em;
+
+  color: #6f1df4;
+}
+
+.user__culture {
+  font-family: "Didact Gothic";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+
+  letter-spacing: 0.07em;
+
+  color: #ababab;
+}
+
+.user__bio {
+  font-family: "Didact Gothic";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0.07em;
+
+  width: 60%;
+}
+
+.user__bio::before {
+  content: open-quote;
+}
+
+.user__bio::after {
+  content: close-quote;
+}
+
+.view__profile__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  background: linear-gradient(135deg, rgba(0, 173, 191, 0.75) 0%, rgba(70, 94, 251, 0.75) 100%);
+  border: none;
+  border-radius: 11px;
+
+  /* Text Formatting */
+  font-family: "Didact Gothic";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+
+  letter-spacing: 0.07em;
+  text-decoration-line: underline;
+
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.modal__dialog::backdrop {
+  background: linear-gradient(45deg, rgba(0, 173, 191, 0.75) 0%, rgba(70, 94, 251, 0.75) 100%);
+  opacity: 0.4;
+}
+
+.modal__dialog {
+  top: 40%;
+  transform: translateY(-50%);
+
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.modal__div {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  width: fit-content;
+}
+
+.modal__heading {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.modal__culture {
+  font-family: "Didact Gothic";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+
+  color: #ababab;
+
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.modal__bio {
+  font-family: "Didact Gothic";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0.07em;
+
+  text-align: center;
+
+  padding-bottom: 1em;
+}
+
+.modal__bio::before {
+  content: open-quote;
+}
+
+.modal__bio::after {
+  content: close-quote;
+}
+
+.modal__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  border: none;
+  border-radius: 11px;
+
+  /* Text Formatting */
+  font-family: "Didact Gothic";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+
+  letter-spacing: 0.07em;
+  text-decoration-line: underline;
+
+  color: #ffffff;
+  cursor: pointer;
+
+  width: 10em;
+
+  margin-inline: 0.35rem;
+}
+
+.no_btn {
+  background-color: #ad4662;
+}
+.yes_btn {
+  background-color: #51a75b;
+}
+
+.button__container {
+  display: flex;
+}

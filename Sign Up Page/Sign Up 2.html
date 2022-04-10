@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+
+    <!-- Link to files -->
+    <link rel="stylesheet" type="text/css" href="/global.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="/loadTime.js"></script>
+
+    <!-- Boxicons Import -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- Google Fonts (Poppins, Didact Gothic, Lexend Deca)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Lexend+Deca&family=Open+Sans&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body onload="loadTime()" style="background-color: #f3f5f6">
+    <!-- Logo Div -->
+    <div class="logo"></div>
+
+    <!-- Section for Form -->
+    <div class="main__content">
+      <!-- Div for flex style-->
+      <section class="form__group">
+        <!-- Section to divide form group -->
+        <a href="/Landing Page/Landing Page.html"><i class="bx bx-x cross__symbol"></i></a>
+
+        <div class="all__tags">
+          <!--Div Tag to add inline-margin-->
+          <h2 class="welcome__text">Welcome!</h2>
+
+          <div class="sign__in__grp">
+            <h3>Continue</h3>
+            <h4>signing up!</h4>
+          </div>
+
+          <form onsubmit="userRegister2(event);">
+            <div class="input__grp">
+              <h3>Culture</h3>
+              <div class="input__down">
+                <input type="text" id="culture" placeholder="Enter your culture" text="" required />
+                <!-- <i class="bx bxs-down-arrow down__arrow"></i> -->
+              </div>
+            </div>
+
+            <div class="input__grp">
+              <h3>Phone Number</h3>
+              <input
+                type="tel"
+                id="phoneNum"
+                pattern="[789][0-9]{9}"
+                placeholder="Enter your phone number"
+                text=""
+                required
+              />
+            </div>
+
+            <div class="input__grp">
+              <h3>About Yourself</h3>
+              <textarea
+                id="userBio"
+                type="text"
+                placeholder="Mention your culture, and what you want to know more about"
+                text=""
+                class="textarea__input"
+                required
+              ></textarea>
+            </div>
+
+            <div class="button__container">
+              <button class="go__back" onclick="goBack()">Go Back</button>
+
+              <input type="submit" value="Register" class="register__button" />
+            </div>
+          </form>
+
+          <div class="register__grp">
+            <h3>
+              Already have an account? <b><a href="/Sign In Page/Sign In.html">Login</a></b>
+            </h3>
+          </div>
+        </div>
+      </section>
+
+      <img src="/assets/form_image.svg" class="img__styling" alt="Image to fill canvas" />
+    </div>
+  </body>
+
+  <!-- Scripts to load for Database (MUST BE DONE AFTER BODY TAG) -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+  <!-- Link to JS File (MUST BE DONE AFTER LOADING DATABASE FILES) -->
+  <script src="Sign Up.js"></script>
+</html>

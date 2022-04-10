@@ -1,0 +1,380 @@
+* {
+  margin: 0px;
+  padding: 0px;
+
+  overflow-y: visible;
+
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+.main__content {
+  display: flex;
+}
+
+/* Logo Class */
+.logo {
+  position: relative;
+  left: 2vw;
+
+  margin-top: 0.2em;
+  padding-bottom: 0.75em;
+}
+
+/* Background of Form */
+.form__group {
+  width: clamp(400px, 30vw, 580px);
+
+  background: #ffffff;
+  border: 0.5px solid #878787;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 64px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+
+  margin-left: 5vw;
+  margin-bottom: 5vh;
+}
+
+.cross__symbol {
+  position: relative;
+  top: 5%;
+  left: 90%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 24px;
+
+  border-radius: 90%;
+  box-sizing: border-box;
+
+  transition: all ease-in 0.2s;
+}
+
+.cross__symbol:hover {
+  color: #ababab;
+  cursor: pointer;
+}
+
+.welcome__cross {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+/* All Tags Div */
+.all__tags {
+  margin: 0em 0em 2em 1.5em;
+}
+
+/* Welcome Text (Top) */
+.welcome__text {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 38px;
+}
+
+/* Sign In To start sharing */
+div.sign__in__grp {
+  margin: 1.9em 0;
+}
+div.sign__in__grp h3 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 31px;
+
+  color: #000000;
+}
+
+div.sign__in__grp h4 {
+  font-family: Lexend Deca;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #224957;
+}
+
+/* Username Grp */
+div.input__grp {
+  margin-bottom: 1.75em;
+}
+
+div.input__grp h3 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+
+  padding-bottom: 0.2em;
+}
+
+div.input__grp input {
+  /* Text formatting */
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0px;
+
+  color: #000;
+
+  padding: 1.25em 0;
+  padding-left: 2em;
+
+  /* Box Formatting */
+  background: #ffffff;
+  border: 0.6px solid #282828;
+  box-sizing: border-box;
+  border-radius: 6px;
+
+  width: 90%;
+}
+
+/* Remember Forgot Grp */
+.remember__forgot__grp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 90%;
+  margin-bottom: 1em;
+}
+
+/* Remember Grp */
+.remember__grp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.remember__me__text {
+  position: relative;
+
+  padding-left: 0.4em;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+
+  color: #000;
+}
+
+.remember__me__button {
+  width: 15px;
+  height: 15px;
+
+  cursor: pointer;
+
+  border-radius: 0;
+}
+
+/* Forgot Password */
+.forgot__password {
+  text-decoration: none;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+
+  color: #4d4d4d;
+}
+
+.button__container {
+  background: linear-gradient(80deg, #07aefb, #0b75ff 50%, #001aff 50%, #4e2bec);
+  border-radius: 6px;
+
+  width: 90%;
+  height: 3.75em;
+
+  color: #ffffff;
+
+  float: left;
+
+  margin-bottom: 2em;
+}
+
+.button__container input,
+button {
+  width: 50%;
+  height: 100%;
+  float: left;
+
+  /* Text Style */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+
+  background: transparent;
+  color: inherit;
+
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.4s;
+}
+
+.register__button:hover {
+  transform: scale(1.2);
+}
+
+.go__back:hover {
+  transform: scale(1.2);
+  color: black;
+}
+
+/* Sign Up Page 1 */
+.reg__button {
+  /* Text Style */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #ffffff;
+
+  /* Button Style */
+  width: 90%;
+  height: 3.75rem;
+  background: linear-gradient(135deg, #00adbf 0%, #00adbf 14.06%, #465efb 97.4%);
+  border: 0px;
+  border-radius: 6px;
+  /* margin-top: 1.5em; */
+  /* margin-bottom: 2rem; */
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.reg__button:hover {
+  font-size: 22px;
+}
+
+/* Register Grp */
+.register__grp {
+  /* border: 1px solid black; */
+  width: 90%;
+
+  display: flex;
+  justify-content: center;
+
+  height: max-content;
+
+  margin-top: 3em;
+}
+
+.register__grp h3 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+
+  color: #7d7d7d;
+}
+
+.register__grp a {
+  position: relative;
+
+  text-decoration: none;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+
+  color: #000000;
+}
+
+.register__grp a:hover {
+  text-decoration: underline;
+}
+
+/* Image */
+.img__styling {
+  position: fixed;
+  left: 900px;
+
+  transform: scale(1.5);
+}
+
+/* Dropdown Button */
+.textarea__input {
+  /* Text Formatting */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0px;
+
+  padding-top: 1em;
+  padding-inline: 1em;
+
+  /* Box Formatting */
+  width: 90%;
+  height: 186px;
+
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  resize: none;
+}
+
+.down__arrow {
+  position: relative;
+  right: 40px;
+
+  font-size: 0.625em;
+  text-align: center;
+
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.input__down {
+  display: flex;
+  align-items: center;
+}
+
+.match__text {
+  /* Text Formatting */
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+
+  color: #db2c20cc;
+
+  /* Box Formatting */
+  /* padding: 1rem; */
+
+  width: 90%;
+  border-radius: 6px;
+
+  /* background-color: #db2c209c; */
+}
+
+.match__div {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+
+  margin-top: 0.5rem;
+  width: 90%;
+
+  visibility: hidden;
+}
+
+.error__icon {
+  color: #db2c20cc;
+}

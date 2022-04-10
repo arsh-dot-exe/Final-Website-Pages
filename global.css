@@ -1,0 +1,117 @@
+/* All Elements */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Classes for Header */
+.header__class {
+  position: relative;
+  margin: 0 4vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Class for Logo */
+.logo {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.75em;
+
+  letter-spacing: 0.07em;
+}
+
+.logo::before {
+  content: "meet";
+  color: #e55c54;
+}
+
+.logo::after {
+  content: "cult";
+  color: #2079ff;
+}
+
+/* Class For Header Links */
+.nav__div {
+  font-family: Didact Gothic;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.25em;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+
+  line-height: 1.625em;
+  letter-spacing: 0.07em !important;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: black;
+
+  box-sizing: border-box;
+
+  transition: ease-out 0.3s;
+
+  margin: 0.5vw;
+}
+
+.nav__link:nth-child(2) {
+  line-height: 1vh;
+  border-right: 1px solid rgba(0, 0, 0, 0.28);
+
+  padding: 0.8vw;
+}
+
+/* Sign Up Button Border */
+.signUp {
+  border: 1px solid #00adbf !important;
+
+  padding: 0.6vw;
+  border-radius: 7px;
+
+  transition: ease-out 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+/* Link Animations */
+.nav__link:hover {
+  color: #e2443c;
+  transition: ease 0.4s;
+}
+
+/* Sign Up Button Animation */
+.signUp:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.signUp:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #00adbf;
+}
+
+.signUp:hover:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+}
+
+a:active {
+  color: red;
+}

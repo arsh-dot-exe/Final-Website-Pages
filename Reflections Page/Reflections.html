@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reflections</title>
+
+    <!-- Link to files -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="/global.css" />
+    <script src="/loadTime.js"></script>
+
+    <!-- Google Fonts (Poppins, Didact Gothic)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;800&family=Didact+Gothic&family=Open+Sans&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Boxicons Import -->
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- Link to JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+
+  <body onload="loadTime()" style="background-color: #f3f5f6">
+    <section id="header" class="header__class">
+      <!-- Div for Search input -->
+      <div class="search__add">
+        <div class="search__input">
+          <i class="bx bx-search search__icon"></i>
+          <input
+            class="input__box"
+            id="input__box"
+            type="search"
+            placeholder="Search by profile name, or culture"
+            text=""
+            data-search
+          />
+        </div>
+
+        <i onclick="openReflectionDialog()" class="bx bxs-plus-circle plus__icon"></i>
+      </div>
+
+      <!-- Logo Div -->
+      <div class="logo"></div>
+
+      <!-- Navigation Div -->
+      <div class="nav__div">
+        <a href="/Content Page/Content.html" class="nav__link">find cultures</a>
+        <a href="/Reflections Page/Reflections.html" class="nav__link">reflections</a>
+        <img src="/assets/developer_pfp.jfif" alt="Photo of Developer" class="user__pfp" />
+      </div>
+
+      <dialog class="modal__dialog" id="add_reflection_modal">
+        <div class="modal__div">
+          <i class="bx bx-x cross__symbol" onclick="closeModal()"></i>
+          <h2 class="modal__heading" data-modal-heading>Add your reflection</h2>
+          <input
+            class="input__box"
+            id="reflection_culture"
+            type="text"
+            placeholder="Which culture is your reflection about?"
+            text=""
+          />
+
+          <textarea
+            id="reflection"
+            type="text"
+            placeholder="Write your reflection here..."
+            text=""
+            class="input__box textarea__input"
+            required
+          ></textarea>
+
+          <button class="modal__btn" onclick="addReflection()">Submit Reflection</button>
+        </div>
+      </dialog>
+    </section>
+
+    <h1 class="no_data_found" id="no_data_found">NO DATA FOUND</h1>
+    <section class="culture__group" data-reflection-container>
+      <template data-culture-template>
+        <div class="reflection__grp">
+          <h1 class="culture__heading heading_and_btn" data-culture-heading>Culture 1</h1>
+          <div class="row__cards">
+            <!-- First Arrow -->
+            <!-- <button class="arrow__btn">
+              <i class="bx bx-chevron-left arrow"></i>
+            </button> -->
+
+            <div class="row__cards" data-all-reflections>
+              <template data-reflection-template>
+                <div class="reflection__card">
+                  <div class="profile__info">
+                    <img
+                      src="temp_profile_pfp.svg"
+                      class="profile__picture"
+                      alt="User Profile Picture"
+                    />
+                    <div>
+                      <p class="profile__username" data-username>Username</p>
+                      <p class="profile__culture" data-culture>Culture of user</p>
+                    </div>
+                  </div>
+                  <p class="reflection__brief" data-reflection>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+                    Praesent libero. Sed cursus...
+                  </p>
+                  <div class="original_and_date">
+                    <a href="" class="reflection_show_original">Show Original</a>
+                    <p class="reflection__date" data-publish-date>Date of publish</p>
+                  </div>
+                </div>
+              </template>
+            </div>
+
+            <!-- Second Arrow -->
+            <!-- <button class="arrow__btn">
+              <i class="bx bx-chevron-right arrow"></i>
+            </button> -->
+          </div>
+        </div>
+      </template>
+    </section>
+  </body>
+
+  <!-- Scripts to load for Database (MUST BE DONE AFTER BODY TAG) -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+
+  <!-- Link to JS File (MUST BE DONE AFTER LOADING DATABASE FILES) -->
+  <script src="addReflection.js"></script>
+  <script src="script.js"></script>
+</html>
