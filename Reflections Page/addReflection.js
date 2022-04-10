@@ -23,7 +23,7 @@ const addModal = document.querySelector("#add_reflection_modal");
 if (userUid != null) {
 } else {
   alert("You must be signed in to add reflections!");
-  window.location.href = "/Sign In Page/Sign In.html";
+  window.location.href = "/Final-Website-Pages/Sign In Page/Sign In.html";
 }
 
 function addReflection() {

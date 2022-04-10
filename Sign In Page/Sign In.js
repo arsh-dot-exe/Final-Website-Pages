@@ -27,7 +27,7 @@ function userLogin(event) {
       sessionStorage.setItem("userUid", user.uid);
       userUid = user.uid;
 
-      window.location.href = "/Content Page/Content.html";
+      window.location.href = "/Final-Website-Pages/Content Page/Content.html";
     })
     .catch((error) => {
       var error_code = error.code;

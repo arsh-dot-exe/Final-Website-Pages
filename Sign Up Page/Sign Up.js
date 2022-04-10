@@ -84,7 +84,7 @@ function userRegister2(event) {
     db_ref
       .update(user_data)
       .then(() => {
-        window.location.href = "/Content Page/Content.html";
+        window.location.href = "/Final-Website-Pages/Content Page/Content.html";
       })
       .catch((error) => {
         console.log(error.message);
